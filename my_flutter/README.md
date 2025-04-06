@@ -46,5 +46,16 @@ end</code></pre>
 <p>Open <code>MyApp.xcworkspace</code> in Xcode. You can now build the project using ⌘B.</p>
 <p><strong>Note:</strong> WHEN YOU ARE ADDING THE <code>Info-Release.plist</code> add to correct path</p>
 <p>Then ADD FLUTTER SCREEN <a href="https://docs.flutter.dev/add-to-app/ios/add-flutter-screen">here</a>.</p>
+<h2>Short Steps</h2>
+<ol>
+<li>Create flutter module and run</li>
+<li>Create iOS app and init pod if not there and update Podfile</li>
+<li>Go to Info tab under targets and add Bonjour Service, it will create Info.plist file then rename it to Info-Debug and Info-Release</li>
+<li>Open Build Settings and update <code>Info.plist</code> path to <code>path/to/Info-$(CONFIGURATION).plist</code></li>
+<li>Update ContentView.swift and App.swift file</li>
+<li>Set Sandbox user input to false</li>
+<li>In Build Phases, remove release Info.plist</li>
+<li>Check Podfile and run <code>pod install</code></li>
+</ol>
 </body>
 </html>
